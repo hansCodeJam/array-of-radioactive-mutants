@@ -18,17 +18,26 @@ function changeAllValuesTo(arr, value) {
 }
 
 function oddOrEven(arr) {
-  for(i = 0; i < arr.length; ++i){
-   if(arr[i] % 2 === 0) {
-     newArray = "even";
-   } else if (arr[i] % 2 === 0) {
-     newArray = "odd";
-   }
- }
+  let i = 0;
+  while(i < arr.length) {
+    if(arr[i] % 2 === 1) {
+      arr[i] = 'odd';
+    } else {
+      arr[i] = 'even';
+    }
+    i++;
+  }
 }
 
-function changeNextThreeToValue(start, arr, value) {
-  
+function changeNextThreeToValue(start, arr, val) {
+  let i = start;
+  let count = 0;
+
+  while(i < arr.length && count < 3) {
+    arr[i] = val;
+    count++;
+    i++;
+  } 
 }
 // const value1 = 15;
 // expect(arr1).toEqual([1, 2, 15, 15, 15, 9]);
